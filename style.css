@@ -1,0 +1,95 @@
+/* Add the general styles for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1d1f20;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+h1 {
+  color: #00f0ff;
+  margin-bottom: 40px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product Card */
+.product {
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 250px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h3 {
+  color: #fff;
+  margin: 15px 0;
+}
+
+.product p {
+  color: #bbb;
+}
+
+.product button {
+  background-color: #00f0ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #0088cc;
+}
+
+/* Hover Effect */
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(0, 150, 255, 1);
+  }
+}
